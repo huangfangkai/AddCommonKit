@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AddCommonKit"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A short description of AddCommonKit."
   s.platform     = :ios, "9.0"
   s.homepage     = "https://github.com/huangfangkai/AddCommonKit"
@@ -26,6 +26,12 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.framework  = "UIKit","Foundation"
   s.source_files = "AddCommonKit/Util/*.{h,m}"
+  s.dependency  = 'TTTAttributedLabel', '1.10.1'
+  s.dependency  = 'MBProgressHUD', '~> 1.1.0'
+  s.dependency  = 'AFNetworking', '~> 4.0.1'
+  s.dependency  = 'FLEX'
+  s.dependency  = 'Masonry', '~> 1.1.0'
+  s.dependency  = 'BlocksKit', '~> 2.2.5'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
