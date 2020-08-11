@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AddCommonKit"
-  s.version      = "1.0.0"
+  s.version      = "0.0.1"
   s.summary      = "A short description of AddCommonKit."
   s.platform     = :ios, "9.0"
   s.homepage     = "https://github.com/huangfangkai/AddCommonKit"
@@ -25,13 +25,21 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/huangfangkai/AddCommonKit.git", :tag => s.version }
   s.requires_arc = true
   s.framework  = "UIKit","Foundation"
-  s.source_files = "AddCommonKit/Util/*.{h,m}"
-  s.dependency  = 'TTTAttributedLabel', '1.10.1'
-  s.dependency  = 'MBProgressHUD', '~> 1.1.0'
-  s.dependency  = 'AFNetworking', '~> 4.0.1'
-  s.dependency  = 'FLEX'
-  s.dependency  = 'Masonry', '~> 1.1.0'
-  s.dependency  = 'BlocksKit', '~> 2.2.5'
+
+  s.default_subspec = 'All'
+  s.subspec 'All' do |ss|
+    ss.dependency 'AddCommonKit/Util'
+  end
+  s.subspec 'Util' do |ss|
+    ss.source_files = 'BlocksKit/BlocksKit.h', "BlocksKit/BKDefines.h", 'BlocksKit/Core/*.{h,m}'
+  end
+
+  s.dependency "AFNetworking", "~> 4.0.1"
+  s.dependency "FLEX"
+  s.dependency "Masonry", "~> 1.1.0"
+  s.dependency "BlocksKit", "~> 2.2.5"
+  s.dependency "TTTAttributedLabel", "~> 1.10.1"
+  s.dependency "MBProgressHUD", "~> 1.1.0"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -98,8 +106,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
