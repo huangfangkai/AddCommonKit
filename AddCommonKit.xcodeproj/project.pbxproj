@@ -632,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9YHXDAVF4M;
-				GCC_PREFIX_HEADER = /Users/hfk/Desktop/AddCommonKit/AddCommonKit/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/hfk/MyGitSpec/AddCommonKit/AddCommonKit/PrefixHeader.pch;
 				INFOPLIST_FILE = AddCommonKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9YHXDAVF4M;
-				GCC_PREFIX_HEADER = /Users/hfk/Desktop/AddCommonKit/AddCommonKit/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/hfk/MyGitSpec/AddCommonKit/AddCommonKit/PrefixHeader.pch;
 				INFOPLIST_FILE = AddCommonKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
