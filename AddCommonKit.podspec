@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AddCommonKit"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "A short description of AddCommonKit."
   s.platform     = :ios, "9.0"
   s.homepage     = "https://github.com/huangfangkai/AddCommonKit"
@@ -33,6 +33,8 @@ Pod::Spec.new do |s|
   s.subspec 'Util' do |ss|
     ss.source_files = 'AddCommonKit/Util/*.{h,m}', 'AddCommonKit/Util/Network/*.{h,m}', 'AddCommonKit/Util/Common/*.{h,m}', 'AddCommonKit/Util/Views/*.{h,m}', 'AddCommonKit/Util/KTActionSheet/*.{h,m,xib}'
   end
+
+  s.prefix_header_contents = '#import "AddCommonHead.h"'
 
   s.dependency "AFNetworking", "~> 4.0.1"
   s.dependency "FLEX"
