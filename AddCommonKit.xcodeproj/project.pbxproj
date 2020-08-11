@@ -220,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				8F7D65A024E13EF300F435CA /* AddCommonHead.h */,
+				8F7D65E424E13EF300F435CA /* KTActionSheet */,
 				8F7D65A124E13EF300F435CA /* Network */,
 				8F7D65AA24E13EF300F435CA /* Common */,
 				8F7D65DA24E13EF300F435CA /* Views */,
@@ -308,7 +309,6 @@
 				8F7D65E124E13EF300F435CA /* GuideTipsView.m */,
 				8F7D65E224E13EF300F435CA /* CodeGeneratorView.h */,
 				8F7D65E324E13EF300F435CA /* Helper.m */,
-				8F7D65E424E13EF300F435CA /* KTActionSheet */,
 				8F7D65F324E13EF300F435CA /* UIActionSheet+Common.m */,
 				8F7D65F424E13EF300F435CA /* UITTTAttributedLabel.h */,
 				8F7D65F524E13EF300F435CA /* UIPlaceHolderTextView.m */,
@@ -345,7 +345,6 @@
 				667729456369ED76F2DC9E34 /* Pods-AddCommonKit.debug.xcconfig */,
 				F37B15218461093E4D2EADD1 /* Pods-AddCommonKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
