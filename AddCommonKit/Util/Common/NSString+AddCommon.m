@@ -200,12 +200,24 @@
         string = @"0";
     }
     string = [[NSString stringWithFormat:@"%@",string] stringByReplacingOccurrencesOfString:@"," withString:@""];
-    NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
+    NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
     NSDecimalNumber *ouncesDecimal;
     NSDecimalNumber *roundedOunces;
     ouncesDecimal = [[NSDecimalNumber alloc] initWithString:string];
     roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
-    return [roundedOunces stringValue];
+
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setDecimalSeparator:@"."];
+    NSMutableString *format = [NSMutableString stringWithString:@"###,##"];
+    if (position > 0) {
+        [format appendString:@"0."];
+        for (NSInteger i = 0; i < position; i++) {
+            [format appendString:@"0"];
+        }
+    }
+    [numberFormatter setPositiveFormat:format];
+    NSString *formattedNumberString = [numberFormatter stringFromNumber:roundedOunces];
+    return formattedNumberString;
 }
 
 +(NSString *)transformNsNumber:(NSString *)string withZeroNum:(NSInteger)zeroNum{
