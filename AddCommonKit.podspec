@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
   end
   s.subspec 'Util' do |ss|
     ss.source_files = 'AddCommonKit/Util/*.{h,m}', 'AddCommonKit/Util/Network/*.{h,m}', 'AddCommonKit/Util/Common/*.{h,m}', 'AddCommonKit/Util/Views/*.{h,m}', 'AddCommonKit/Util/KTActionSheet/*.{h,m,xib}'
+    ss.dependency "Masonry", "~> 1.1.0"
   end
 
   s.prefix_header_contents = '#import "AddCommonHead.h"'
